@@ -1,0 +1,317 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 30px;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+
+/* ===============================
+   SUMMARY
+   =============================== */
+
+.summary {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #555;
+}
+
+.card p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* ===============================
+   FORM
+   =============================== */
+
+form {
+    background-color: white;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form select {
+    padding: 8px;
+    margin-top: 5px;
+}
+
+form button {
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+
+/* ===============================
+   CATEGORY + MONTHLY SUMMARY
+   =============================== */
+
+#categorySummary,
+#monthlySummary {
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.summary-row {
+    background-color: white;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.summary-row strong {
+    text-transform: capitalize;
+}
+
+
+/* ===============================
+   EXPENSE CHART
+   =============================== */
+
+#expenseChart {
+    background-color: white;
+    max-width: 600px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chart-row {
+    margin-bottom: 20px;
+}
+
+.chart-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.chart-bar-container {
+    width: 100%;
+    height: 30px;
+
+    background-color: #eeeeee;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+}
+
+.chart-bar {
+    height: 100%;
+
+    background-color: #333333;
+
+    border-radius: 5px;
+
+    min-width: 5px;
+}
+
+
+/* ===============================
+   TRANSACTIONS
+   =============================== */
+
+#transactions {
+    max-width: 700px;
+}
+
+#transactions > div {
+    background-color: white;
+
+    padding: 15px 20px;
+
+    margin-bottom: 15px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.transaction-info {
+    flex: 1;
+}
+
+.transaction-info h3 {
+    margin: 0 0 5px 0;
+}
+
+.transaction-info p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.transaction-info small {
+    color: #888;
+}
+
+.transaction-right {
+    text-align: right;
+}
+
+.transaction-right strong {
+    font-size: 20px;
+}
+
+.transaction-right p {
+    margin: 5px 0;
+    text-transform: capitalize;
+    color: #555;
+}
+
+
+/* ===============================
+   BUTTONS
+   =============================== */
+
+.editButton,
+.deleteButton {
+    padding: 6px 12px;
+
+    background-color: #333;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    margin-left: 5px;
+}
+
+.editButton:hover,
+.deleteButton:hover {
+    background-color: #555;
+}
+
+
+/* ===============================
+   INCOME / EXPENSE
+   =============================== */
+
+.income {
+    color: green;
+}
+
+.expense {
+    color: red;
+}
+
+
+/* ===============================
+   SEARCH
+   =============================== */
+
+#searchInput {
+    width: 300px;
+
+    padding: 10px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+}
+
+#filterType {
+    padding: 10px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ===============================
+   MOBILE
+   =============================== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .summary {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card {
+        width: auto;
+    }
+
+    #transactions > div {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .transaction-right {
+        text-align: left;
+        width: 100%;
+    }
+
+    #searchInput {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #filterType {
+        width: 100%;
+    }
+
+    form input,
+    form select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}

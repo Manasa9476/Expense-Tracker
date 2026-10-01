@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Expense Tracker</h1>
+
+    <h2>Summary</h2>
+
+    <div class="summary">
+
+        <div class="card">
+            <h3>Total Balance</h3>
+            <p>₹<span id="balance">0</span></p>
+        </div>
+
+        <div class="card">
+            <h3>Total Income</h3>
+            <p>₹<span id="income">0</span></p>
+        </div>
+
+        <div class="card">
+            <h3>Total Expenses</h3>
+            <p>₹<span id="expenses">0</span></p>
+        </div>
+
+    </div>
+
+
+    <h2>Add Transaction</h2>
+
+    <form id="transactionForm">
+
+        <label>Type:</label>
+
+        <select id="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+        </select>
+
+        <br><br>
+
+        <label>Amount:</label>
+
+        <input
+            type="number"
+            id="amount"
+            required
+        >
+
+        <br><br>
+
+        <label>Category:</label>
+
+        <input
+            type="text"
+            id="category"
+            required
+        >
+
+        <br><br>
+
+        <label>Description:</label>
+
+        <input
+            type="text"
+            id="description"
+        >
+
+        <br><br>
+
+        <label>Date:</label>
+
+        <input
+            type="date"
+            id="date"
+            required
+        >
+
+        <br><br>
+
+        <button type="submit">
+            Add Transaction
+        </button>
+
+    </form>
+
+
+    <h2>Expense by Category</h2>
+
+    <div id="categorySummary">
+        <p>No expenses yet.</p>
+    </div>
+
+
+    <h2>Monthly Expenses</h2>
+
+    <div id="monthlySummary">
+        <p>No expenses yet.</p>
+    </div>
+
+
+    <h2>Expense Chart</h2>
+
+    <div id="expenseChart">
+        <p>No expenses yet.</p>
+    </div>
+
+
+    <h2>Transactions</h2>
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search transactions..."
+    >
+
+    <select id="filterType">
+
+        <option value="all">
+            All Transactions
+        </option>
+
+        <option value="income">
+            Income
+        </option>
+
+        <option value="expense">
+            Expense
+        </option>
+
+    </select>
+
+
+    <div id="transactions">
+
+        <p id="emptyMessage">
+            No transactions yet.
+        </p>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
